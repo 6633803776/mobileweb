@@ -1,0 +1,252 @@
+/* --- Global & Typography --- */
+body {
+    font-family: 'Mali', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 247, 248);
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    background: linear-gradient() ; /* สีเขียวเข้ม (KKU) */
+}
+
+/* --- Box Model: Header/Footer --- */
+header {
+    background: linear-gradient(#8fccf5,#f7cce8) ; /* สีเขียวอมฟ้า (KKU) */
+    color: white;
+    padding: 20px 5%; /* Padding ใช้ Box Model */
+    display: flex;
+    flex-wrap: wrap; /* ให้ responsive */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; /* Box Model */
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #d7f0d9;
+}
+
+.student-info {
+    width: 100%;
+    text-align: center;
+    font-size: 1.0em;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Box Model */
+    margin-top: 40px;
+}
+
+/* --- Box Model: Main Content --- */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px; /* Box Model */
+}
+
+.hero {
+    background-color: #e0f2f1;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* --- Box Model: Location Cards (Grid) --- */
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.location-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding-bottom: 20px; /* Box Model */
+    transition: transform 0.3s;
+}
+/* เพิ่มส่วนนี้เข้าไปในไฟล์ style.css */
+.location-grid h2 {
+    /* สั่งให้หัวข้อนี่กินพื้นที่ Grid Column ทั้งหมด */
+    grid-column: 1 / -1; 
+    /* หรือใช้ grid-column: span 2; ถ้าคุณมั่นใจว่าจะมีเพียง 2 คอลัมน์เท่านั้น */
+    text-align: left; /* จัดให้อยู่ซ้ายเหมือนเดิม */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่างหัวข้อ */
+}
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+    display: flex;
+    overflow-x: auto; /* ให้เลื่อนดูรูปได้ (ในมือถือ) */
+    scroll-snap-type: x mandatory;
+}
+
+.image-gallery img {
+    width: 100%;
+    min-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.location-card h3 {
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.location-card p {
+    padding: 0 20px;
+}
+
+/* --- Form Styling --- */
+.suggestion-form {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.suggestion-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.suggestion-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.suggestion-form input[type="text"],
+.suggestion-form input[type="url"],
+.suggestion-form textarea {
+    width: 100%;
+    padding: 10px; /* Box Model */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* สำคัญ: รวม padding/border ในความกว้าง */
+}
+
+.suggestion-form button {
+    background: linear-gradient(#8fccf5,#f7cce8);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.suggestion-form button:hover {
+    background-color: #45a049;
+}
+
+.success-message {
+    text-align: center;
+    padding: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* --- Media Queries (Responsive Design) --- */
+
+/* สำหรับ Tablet (ความกว้างหน้าจอ 768px หรือน้อยกว่า) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        margin-left: 0;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+        padding: 6px 10px;
+    }
+
+    .student-info {
+        padding-top: 10px;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr; /* ให้แสดงแบบ Single Column */
+    }
+}
+
+/* สำหรับ Mobile (ความกว้างหน้าจอ 480px หรือน้อยกว่า) */
+@media (max-width: 480px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .location-card {
+        margin-bottom: 20px;
+    }
+}
