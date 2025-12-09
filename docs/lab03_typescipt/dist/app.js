@@ -12,7 +12,6 @@ function renderTable(elementId = "studentTableBody", data = null) {
     const studentsToRender = data || manager.getAllStudents(); // ใช้ data จากการค้นหา หรือทั้งหมด
     // showList<Student>(studentsToRender); // หากคุณต้องการแสดงใน Console ด้วย
     studentsToRender.forEach((s) => {
-        // ตรวจสอบชื่อฟิลด์ให้ตรงกับ Student.ts
         tableBody.innerHTML += `
             <tr>
               <td>${s.id}</td>
@@ -22,6 +21,10 @@ function renderTable(elementId = "studentTableBody", data = null) {
               <td>${s.email}</td>           
               <td>${s.year}</td>
               <td>${s.major}</td>
+                <td>
+                    <button class="btn btn-sm btn-info me-1">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </td>
             </tr>
         `;
     });
