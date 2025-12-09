@@ -69,19 +69,19 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(`ผลการค้นหา (ชื่อ/นามสกุล): ${results.length} คน`);
         };
     }
-    // 🆕 Event Handler: ค้นหาด้วย Email (searchEmailBtn) 🆕
+    // ** Event Handler: ค้นหาด้วย Email (searchEmailBtn) **
     const searchEmailBtn = document.getElementById("searchEmailBtn");
     if (searchEmailBtn) {
         searchEmailBtn.onclick = () => {
             const keyword = document.getElementById("searchEmail").value;
-            const result = manager.findStudentByEmail(keyword);
+            const result = manager.findStudentByEmail(keyword); // สมมติว่าคืนค่าเป็น Student หรือ null
             if (result) {
-                // หากพบ ให้แสดงเฉพาะคนเดียวในรูปแบบ Array
+                // หากพบ ให้แสดงผลเฉพาะคนเดียว
                 renderTable("studentTableBody", [result]);
                 alert(`พบนักศึกษา: ${result.first_name} ${result.last_name}`);
             }
             else {
-                // หากไม่พบ ให้เคลียร์ตาราง
+                // หากไม่พบ ให้ล้างตาราง หรือแสดงเฉพาะหัวตาราง
                 renderTable("studentTableBody", []);
                 alert(`ไม่พบนักศึกษาที่มี Email: ${keyword}`);
             }
@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchMajorBtn) {
         searchMajorBtn.onclick = () => {
             const keyword = document.getElementById("searchMajor").value;
-            const results = manager.findStudentsByMajor(keyword);
+            const results = manager.findStudentsByMajor(keyword); // สมมติว่าคืนค่าเป็น Student[]
             // แสดงผลลัพธ์ในตาราง
             renderTable("studentTableBody", results);
-            alert(`พบในสาขา: ${results.length} คน`);
+            alert(`พบในสาขา ${keyword}: ${results.length} คน`);
         };
     }
     // 4. เรียก renderTable ครั้งแรก เพื่อแสดงข้อมูลที่โหลดมาจาก localStorage

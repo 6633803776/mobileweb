@@ -84,19 +84,19 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // 🆕 Event Handler: ค้นหาด้วย Email (searchEmailBtn) 🆕
+   // ** Event Handler: ค้นหาด้วย Email (searchEmailBtn) **
     const searchEmailBtn = document.getElementById("searchEmailBtn") as HTMLButtonElement;
     if (searchEmailBtn) {
         searchEmailBtn.onclick = () => {
             const keyword = (document.getElementById("searchEmail") as HTMLInputElement).value;
-            const result = manager.findStudentByEmail(keyword);
+            const result = manager.findStudentByEmail(keyword); // สมมติว่าคืนค่าเป็น Student หรือ null
 
             if (result) {
-                // หากพบ ให้แสดงเฉพาะคนเดียวในรูปแบบ Array
+                // หากพบ ให้แสดงผลเฉพาะคนเดียว
                 renderTable("studentTableBody", [result]); 
                 alert(`พบนักศึกษา: ${result.first_name} ${result.last_name}`);
             } else {
-                // หากไม่พบ ให้เคลียร์ตาราง
+                // หากไม่พบ ให้ล้างตาราง หรือแสดงเฉพาะหัวตาราง
                 renderTable("studentTableBody", []); 
                 alert(`ไม่พบนักศึกษาที่มี Email: ${keyword}`);
             }
@@ -108,11 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchMajorBtn) {
         searchMajorBtn.onclick = () => {
             const keyword = (document.getElementById("searchMajor") as HTMLInputElement).value;
-            const results = manager.findStudentsByMajor(keyword);
+            const results = manager.findStudentsByMajor(keyword); // สมมติว่าคืนค่าเป็น Student[]
 
             // แสดงผลลัพธ์ในตาราง
             renderTable("studentTableBody", results); 
-            alert(`พบในสาขา: ${results.length} คน`);
+            alert(`พบในสาขา ${keyword}: ${results.length} คน`);
         };
     }
 

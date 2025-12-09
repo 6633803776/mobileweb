@@ -14,60 +14,30 @@
     <h2 class="mb-4">ระบบจัดการนักศึกษา (Student Management System)</h2>
 
 
-    <div class="card p-3 mb-4">
+        <div class="card p-3 mb-4">
       <h5>➕ เพิ่มนักศึกษา</h5>
-      <div class="row g-3">
-        <div class="col-md-2">
-          <input
-            id="id"
-            type="text"
-            class="form-control"
-            placeholder="Student ID"
-          />
+      <div class="row g-2">
+                <div class="col-md-2">
+          <input id="id" type="text" class="form-control" placeholder="Student ID" />
+        </div>
+        <div class="col-md-1">
+          <input id="title_name" type="text" class="form-control" placeholder="คำนำหน้า" />
         </div>
         <div class="col-md-2">
-          <input
-          id="title_name"
-          type="text"
-          class="form-control"
-          placeholder="คำนำหน้า" />
-        </div>
-         <div class="col-md-2">
-          <input
-          id="first_name"
-          type="text"
-          class="form-control"
-          placeholder="ชื่อจริง" />
-          </div>
-           <div class="col-md-2">
-          <input
-          id="last_name"
-          type="text"
-          class="form-control"
-          placeholder="นามสกุล" />
-        </div>
-         <div class="col-md-2">
-        <input
-          id="email"
-          type="text"
-          class="form-control"
-          placeholder="อีเมล" />
+          <input id="first_name" type="text" class="form-control" placeholder="ชื่อจริง" />
         </div>
         <div class="col-md-2">
-          <input
-            id="year"
-            type="number"
-            class="form-control"
-            placeholder="ชั้นปี"
-          />
+          <input id="last_name" type="text" class="form-control" placeholder="นามสกุล" />
         </div>
         <div class="col-md-3">
-          <input
-            id="major"
-            type="text"
-            class="form-control"
-            placeholder="สาขา"
-          />
+          <input id="email" type="text" class="form-control" placeholder="อีเมล" />
+        </div>
+        
+                <div class="col-md-1">
+          <input id="year" type="number" class="form-control" placeholder="ชั้นปี" />
+        </div>
+        <div class="col-md-2">
+          <input id="major" type="text" class="form-control" placeholder="สาขา" />
         </div>
         <div class="col-md-1">
           <button id="addBtn" class="btn btn-primary w-100">เพิ่ม</button>
@@ -79,37 +49,23 @@
         <div class="card p-3 mb-4">
       <h5>🔍 ค้นหาด้วยชื่อ</h5>
       <div class="input-group">
-        <input
-          id="searchName"
-          type="text"
-          class="form-control"
-          placeholder="ป้อนชื่อที่ต้องการค้นหา"
-        />
+        <input id="searchName" type="text" class="form-control" placeholder="ป้อนชื่อที่ต้องการค้นหา" />
         <button id="searchNameBtn" class="btn btn-success">ค้นหา</button>
       </div>
     </div>
-    
-    <div class="card p-3 mb-4">
+    
+        <div class="card p-3 mb-4">
       <h5>🔍 ค้นหาด้วย E-Mail</h5>
       <div class="input-group">
-        <input
-          id="searchEmail"
-          type="email"
-          class="form-control"
-          placeholder="ป้อนอีเมลที่ต้องการค้นหา"
-        />
+        <input id="searchEmail" type="email" class="form-control" placeholder="ป้อนอีเมลที่ต้องการค้นหา" />
         <button id="searchEmailBtn" class="btn btn-info">ค้นหา</button>
       </div>
     </div>
-            <div class="card p-3 mb-4">
+    
+        <div class="card p-3 mb-4">
       <h5>🔍 ค้นหาด้วยสาขาวิชา</h5>
       <div class="input-group">
-        <input
-          id="searchMajor"
-          type="text"
-          class="form-control"
-          placeholder="ป้อนสาขาที่ต้องการค้นหา"
-        />
+        <input id="searchMajor" type="text" class="form-control" placeholder="ป้อนสาขาที่ต้องการค้นหา" />
         <button id="searchMajorBtn" class="btn btn-warning">ค้นหา</button>
       </div>
     </div>
