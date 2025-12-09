@@ -61,7 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // ล้างฟอร์ม
             (document.getElementById("id") as HTMLInputElement).value = '';
-            // ... ล้างค่า input อื่นๆ ...
+            (document.getElementById("title_name") as HTMLInputElement).value = ''; 
+        (document.getElementById("first_name") as HTMLInputElement).value = ''; 
+        (document.getElementById("last_name") as HTMLInputElement).value = ''; 
+        (document.getElementById("email") as HTMLInputElement).value = ''; 
+        // สำหรับ year ซึ่งเป็น type="number" ก็ใช้ค่าว่างได้
+        (document.getElementById("year") as HTMLInputElement).value = ''; 
+        (document.getElementById("major") as HTMLInputElement).value = ''; 
+        
         };
     }
     
