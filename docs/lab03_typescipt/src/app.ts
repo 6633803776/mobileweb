@@ -17,8 +17,7 @@ function renderTable(elementId: string = "studentTableBody", data: Student[] | n
 
     // showList<Student>(studentsToRender); // หากคุณต้องการแสดงใน Console ด้วย
 
-    studentsToRender.forEach((s) => {
-        // ตรวจสอบชื่อฟิลด์ให้ตรงกับ Student.ts
+   studentsToRender.forEach((s) => {
         tableBody.innerHTML += `
             <tr>
               <td>${s.id}</td>
@@ -28,6 +27,10 @@ function renderTable(elementId: string = "studentTableBody", data: Student[] | n
               <td>${s.email}</td>           
               <td>${s.year}</td>
               <td>${s.major}</td>
+                <td>
+                    <button class="btn btn-sm btn-info me-1">Edit</button>
+                    <button class="btn btn-sm btn-danger">Delete</button>
+                </td>
             </tr>
         `;
     });
