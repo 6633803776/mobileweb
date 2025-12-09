@@ -50,7 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             renderTable(); // 3. แสดงผลทันทีหลังเพิ่ม
             // ล้างฟอร์ม
             document.getElementById("id").value = '';
-            // ... ล้างค่า input อื่นๆ ...
+            document.getElementById("title_name").value = '';
+            document.getElementById("first_name").value = '';
+            document.getElementById("last_name").value = '';
+            document.getElementById("email").value = '';
+            // สำหรับ year ซึ่งเป็น type="number" ก็ใช้ค่าว่างได้
+            document.getElementById("year").value = '';
+            document.getElementById("major").value = '';
         };
     }
     // ** Event Handler: ค้นหาด้วยชื่อ (searchNameBtn) **
