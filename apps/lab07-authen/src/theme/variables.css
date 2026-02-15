@@ -1,0 +1,11 @@
+/* For information on how to create your own theme, please refer to:
+http://ionicframework.com/docs/theming/ */
+:root {
+  --ion-color-primary: #ffb6c1; /* ชมพูพาสเทล Pastel Pink */
+  --ion-color-primary-rgb: 255,182,193;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255,255,255;
+  --ion-color-primary-shade: #e0a0aa;
+  --ion-color-primary-tint: #ffbdc7;
+  --ion-background-color: #fff0f5; /* พื้นหลังสีชมพูอ่อนมาก Lavender Blush */
+}

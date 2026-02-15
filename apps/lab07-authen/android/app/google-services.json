@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "179167941370",
+    "project_id": "lab6mobile",
+    "storage_bucket": "lab6mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179167941370:android:113177dd0f008890a1af43",
+        "android_client_info": {
+          "package_name": "cpkku.jakkaphat.lab07"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179167941370-muhngod8jinj9p4rb8f0lhueuctca4i4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSMGKiqLSnTTUIE28ubmw9945ODdkTyIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179167941370-muhngod8jinj9p4rb8f0lhueuctca4i4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
