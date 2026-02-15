@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <title>Ionic App</title>
 
-    <base href="/" />
+    <base href="./" />
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' *;">
 
     <meta name="color-scheme" content="light dark" />
     <meta
@@ -14,9 +16,8 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
 
-    <link rel="shortcut icon" type="image/png" href="/mobileweb/lab7/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
 
-    <!-- add to homescreen for ios -->
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Ionic App" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -28,10 +29,9 @@
 
   <body>
     <div id="app"></div>
+    
     <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
     <script nomodule crossorigin id="vite-legacy-polyfill" src="/mobileweb/lab7/assets/polyfills-legacy-D053AoFJ.js"></script>
     <script nomodule crossorigin id="vite-legacy-entry" data-src="/mobileweb/lab7/assets/index-legacy-D7HZ7VpA.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
-
 </html>
-
