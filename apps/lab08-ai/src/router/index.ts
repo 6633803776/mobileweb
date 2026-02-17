@@ -32,6 +32,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
+  // การใส่ import.meta.env.BASE_URL ตรงนี้ถูกต้องแล้ว
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
