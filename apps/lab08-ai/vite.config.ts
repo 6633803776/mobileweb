@@ -7,7 +7,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // ย้าย base ออกมาไว้ด้านนอกสุดของ object
+  // ใช้ Relative path ตามแบบ Lab 6
   base: './', 
   
   plugins: [
@@ -18,6 +18,23 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+    },
+  },
+
+  build: {
+    rollupOptions: {
+      output: {
+        // แก้ปัญหาไฟล์ที่ขึ้นต้นด้วย _ แล้ว GitHub Pages ไม่โหลด (404)
+        // ฟังก์ชันนี้จะลบเครื่องหมายขีดล่างออกจากหน้าชื่อไฟล์ assets ทั้งหมด
+        sanitizeFileName(name) {
+          const match = /^[a-z]:/i.exec(name);
+          const driveLetter = match ? match[0] : '';
+          return (
+            driveLetter +
+            name.slice(driveLetter.length).replace(/[\x00-\x1f\x7f<>*|" drilling :]/g, '_').replace(/^_+/, '')
+          );
+        },
+      },
     },
   },
   
