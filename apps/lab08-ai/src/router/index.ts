@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from '@ionic/vue-router';
+// 1. เปลี่ยนจาก createWebHistory เป็น createWebHashHistory
+import { createRouter, createWebHashHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue'
 
@@ -32,8 +33,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  // การใส่ import.meta.env.BASE_URL ตรงนี้ถูกต้องแล้ว
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // 2. เปลี่ยนตรงนี้เป็น createWebHashHistory
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes
 })
 
