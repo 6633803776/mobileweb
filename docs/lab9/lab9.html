@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab09 Sensors - นำเสนอผลงาน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-pink: #FF6685;
+            --light-pink: #FFB3C1;
+            --bg-pink: #FFF0F3;
+            --text-dark: #333333;
+            --shadow-color: rgba(255, 102, 133, 0.2);
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: var(--bg-pink);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* ส่วนหัวของเว็บ */
+        header {
+            background: linear-gradient(135deg, var(--primary-pink), #FF85A2);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 20px var(--shadow-color);
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* กล่องเนื้อหาหลัก */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-pink);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        /* ส่วนแสดงรูปภาพ */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        /* ลูกเล่นเวลาเอาเมาส์ชี้ (Hover Effect) */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px var(--shadow-color);
+            border: 2px solid var(--light-pink);
+        }
+
+        /* กรอบสำหรับใส่รูปและวิดีโอ */
+        .placeholder-box {
+            background-color: #f8f9fa;
+            border: 2px dashed var(--light-pink);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img-placeholder {
+            width: 100%;
+            height: 450px; /* ความสูงจำลองสำหรับรูปหน้าจอมือถือ */
+            margin-bottom: 15px;
+        }
+
+        .img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            max-width: 400px;
+            
+            margin: 0 auto;
+        }
+
+        .video-placeholder video {
+            width: 100%;
+            height: auto; /* เปลี่ยนจาก 100% เป็น auto */
+            border-radius: 10px;
+            /* ลบ object-fit: cover; ออก วิดีโอจะได้ไม่โดนซูมตัดขอบ */
+            display: block;
+        }
+
+        .card h3 {
+            margin: 10px 0 0 0;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        /* ปุ่มย้อนกลับ */
+        .btn-back {
+            display: inline-block;
+            background-color: var(--primary-pink);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .btn-back:hover {
+            background-color: #ff4d73;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 102, 133, 0.4);
+        }
+
+        .center-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lab09 Sensors : Arm Workout App</h1>
+        <p>ชื่อ-สกุล : นายจักรพรรดิ์ ภูวิจิตร | รหัสนักศึกษา : 663380377-6</p>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="section-title">📱 ตัวอย่างหน้าจอบน Android</h2>
+        
+        <div class="gallery-grid">
+            <div class="card">
+                <div class="placeholder-box img-placeholder">
+                    <img src="Firstpage.png" alt="หน้าเริ่มแอป">
+                    </div>
+                <h3>1. หน้าเริ่มแอปพลิเคชัน</h3>
+            </div>
+
+            <div class="card">
+                <div class="placeholder-box img-placeholder">
+                    <img src="Counting.png" alt="ขณะกำลังนับ">
+                    </div>
+                <h3>2. ขณะกำลังใช้งาน / นับรอบ</h3>
+            </div>
+
+            <div class="card">
+                <div class="placeholder-box img-placeholder">
+                    <img src="Result.png" alt="หน้าแสดงสถิติ">
+                    </div>
+                <h3>3. หน้าแสดงสถิติเมื่อกด Stop</h3>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎥 วิดีโอสาธิตการใช้งาน</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 20px;">
+            สาธิตการกด Start มีเสียงแนะนำ และการนับรอบเมื่อยกแขนขึ้นลง (ความยาวประมาณ 1 นาที)
+        </p>
+        
+        <div class="card" style="max-width: 500px; margin: 0 auto;">
+            <div class="placeholder-box video-placeholder">
+                <video controls>
+                    <source src="VideoIntroduce.mov" type="video/mp4">
+                    เบราว์เซอร์ของคุณไม่รองรับการแสดงผลวิดีโอ
+                </video>
+                </div>
+        </div>
+
+        <div class="center-btn">
+            <a href="index.html" class="btn-back">กลับสู่หน้าหลัก (Index)</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
